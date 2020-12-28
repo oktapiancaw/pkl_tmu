@@ -1,0 +1,160 @@
+jQuery(document).ready(function ($) {
+    // Scroll Content
+
+    $(window).scroll(function(){
+        if (window.scroll){
+            // $('.ui-top-menu').css('box-shadow','0px 0px 2px #222');
+        }else{
+            // window.scrollTo(0,0);
+        }
+
+    
+    });
+    // Hiding right click
+
+   // $(document).bind("contextmenu",function(e){
+   //    return false;
+   // }); 
+
+   // Menu Top
+	$('.ui-menu-top li').hover(function(){
+		$(this).find('.lbl-title').css('color','#007ec3');
+		$(this).find('.lbl-subtitle').css('color','#c51c16');
+
+	},function(){
+		$(this).find('.lbl-title').css('color','#606060');
+		$(this).find('.lbl-subtitle').css('color','#8f8f8f');
+		
+
+	});
+
+    $('#slider ul > li > div.ui-slider').each(function(){
+        var divId = $(this).attr('id');
+        var id_slide = $('input[name=data-slide]').val();
+        // alert(divId);
+        $('.ui-wrap-dotted').append('<div class="bubbles bulb-'+divId+'"" data-showdivid="'+ divId +'"></div>');
+        $('.bulb-'+id_slide).addClass('active');
+    });
+
+    // $('.ui-wrap-dotted').on('click','.bubbles', function(){
+    //   var id = $(this).attr('data-showdivid');
+    //   $(this).addClass('active');
+      
+    // });
+
+
+
+    // Slider Firts Home Top
+
+    var slidehomeCount = $('#slider ul li').length;
+    var slidehomeWidth = $('#slider ul li').width();
+    var slidehomeHeight = $('#slider ul li').height();
+    var sliderhomeUlWidth = slidehomeCount * slidehomeWidth;
+    
+    $('#slider').css({ width: slidehomeWidth, height: slidehomeHeight });
+    
+    $('#slider ul').css({ width: sliderhomeUlWidth, marginLeft: - slidehomeWidth });
+    
+    $('#slider ul li:last-child').prependTo('#slider ul');
+
+    function moveLeft_home() {
+        $('#slider ul').animate({
+            left: + slidehomeWidth
+        }, 2000, function () {
+            $('#slider ul li:last-child').prependTo('#slider ul');
+            $('#slider ul').css('left', '');
+        });
+    };
+
+    function moveRight_home() {
+        $('#slider ul').animate({
+            left: - slidehomeWidth
+        }, 2000, function () {
+            $('#slider ul li:first-child').appendTo('#slider ul');
+            $('#slider ul').css('left', '');
+        });
+    };
+
+    $('a.ui-prev-slider').click(function () {
+        var id_slide_next = $('input[name=data-slide]').val();
+        num_next = parseInt(id_slide_next);
+
+        if(num_next > 1){
+            sum_prev = parseInt(num_next - 1);
+            $('input[name=data-slide]').val(sum_prev);
+            $('.bubbles').removeClass('active');
+            $('.bulb-'+sum_prev).addClass('active');
+            moveLeft_home();
+        }else{
+           $(this).prop('disable',true);
+
+        }
+        
+    });
+
+    $('a.ui-next-slider').click(function () {
+    
+        var id_slide = $('input[name=data-slide]').val();
+        num = parseInt(id_slide)
+
+        if (num < 5){
+            num = parseInt (num + 1);
+            $('input[name=data-slide]').val(num);
+            $('.bubbles').removeClass('active');
+            $('.bulb-'+num).addClass('active');
+            moveRight_home();
+        }else{
+           $(this).prop('disable',true);
+         
+        }
+       
+    });
+
+    //Job Slider
+
+
+//     $('.right-job').click(function(){
+//         var id_sjob = $('input[name=job-slide]').val();
+//         var num = parseInt(id_sjob);
+//         var slideleft = $('.the-job-slide').width();
+
+
+//         num = parseInt(num + 1);
+//         $('input[name=job-slide]').val(num);
+
+//         $('#js-'+id_sjob).animate({
+//             left : - slideleft
+//         },500,function(){
+//             $('#job-play-slider .far-job-slide .the-job-slide:first-child').appendTo('#job-play-slider .far-job-slide');
+//             $('#job-play-slider .far-job-slide ').css('left','');
+//         });
+
+//     });
+
+
+//     $('.prev-job').click(function(){
+//         var id_sjob = $('input[name=job-slide]').val();
+//         var num = parseInt(id_sjob);
+//         var slideleft = $('.the-job-slide').width();
+
+
+//         num = parseInt(num - 1);
+//         $('input[name=job-slide]').val(num);
+
+//         $('#js-'+id_sjob).animate({
+//             left : + slideleft
+//         },500,function(){
+//             $('#job-play-slider .far-job-slide .the-job-slide:first-child').appendTo('#job-play-slider .far-job-slide');
+//             $('#job-play-slider .far-job-slide ').css('left','');
+//         });
+
+//     });
+
+//     $('.prod-items').hover(function(){
+//         $(this).find('.pitems-title').css('color','#b80900');
+//     }, function(){
+//         $(this).find('.pitems-title').css('color','#0681c6');
+        
+//     });
+
+});

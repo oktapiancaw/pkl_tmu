@@ -1,0 +1,377 @@
+.ui-main-content{
+	width: 1200px;
+	height: 1453px;
+	/*background-color: #dadada;*/
+	float: left;
+}
+
+.ui-content-title{
+	width: 1200px;
+	float: left;
+	height: 100px;
+	/*background-color: red;*/
+}
+
+.ui-title-top{
+	width: 345px;
+	height: 65px;
+	/*background-color: red;*/
+	float: right;
+	margin-top: 15px;
+	margin-right: 19px
+}
+
+.title-text{
+	border-bottom: 1px solid #bababa;
+	height: 48px;
+	width: 300px;
+	float: right;
+	color: #b80900;
+	font-family: CGFont;
+	text-transform: uppercase;
+	font-size: 36px;
+	text-align: right;
+}
+
+.ico-ct-profile{
+	width: 62px;
+	height: 68px;
+	background: url('../image/ico-ct-profile.png')no-repeat;
+	float: right;
+	position: absolute;
+}
+
+.ico-ct-download{
+	width: 62px;
+	height: 68px;
+	background: url('../image/ico-catalog.png')no-repeat;
+	float: right;
+	position: absolute;
+}
+
+
+.ico-ct-job{
+	width: 62px;
+	height: 68px;
+	background: url('../image/ico-ct-job.png')no-repeat;
+	float: right;
+	position: absolute;
+}
+
+.ico-ct-portfolio{
+	width: 67px;
+	height: 63px;
+	background: url('../image/ico-ct-portfolio.png')no-repeat;
+	float: right;
+	position: absolute;
+}
+
+
+.ico-ct-product{
+	width: 62px;
+	height: 68px;
+	background: url('../image/ico-ct-product.png')no-repeat;
+	float: right;
+	position: absolute;
+}
+
+.ico-ct-vproduct{
+	width: 62px;
+	height: 68px;
+	background: url('../image/ico-ct-vproduct.png')no-repeat;
+	float: right;
+	position: absolute;
+}
+
+
+.ico-ct-contact{
+	width: 62px;
+	height: 68px;
+	background: url('../image/ico-ct-contact.png')no-repeat;
+	float: right;
+	position: absolute;
+}
+
+.ico-ct-team2{
+	width: 69px;
+	height: 56px;
+	background: url('../image/ico-ct-team2.png')no-repeat;
+	float: right;
+	position: absolute;
+}
+
+.ico-ct-act{
+	width: 68px;
+	height: 68px;
+	background: url('../image/ico-ct-activity.png')no-repeat;
+	background-size: 60px;
+	float: right;
+	position: absolute;
+}
+
+.ui-content-center{
+	width: 1200px;
+	height: 1318px;
+	/*background-color: red;*/
+	float: left;
+	margin-top: 55px;
+}
+
+.block-left{
+	width: 395px;
+	height: 1319px;
+	float: left;
+	/*background-color: orange*/
+}
+
+.ui-menu-product{
+	width: 395px;
+	height: 728px;
+	float: left;
+	background-color: #d6d6d6
+}
+
+	.prod-title{
+		width: 361px;
+		height: 82px;
+		float: left;
+		font-family: CGFont;
+		font-size: 22px;
+		color: #0681c6;
+		text-transform: uppercase;
+		line-height: 82px;
+		padding-left: 34px
+		/*border-bottom: 1px solid*/
+	}
+
+	.prod-list{
+		height: 583px;
+		width: 395px;
+		float: left;
+		/*background-color: red*/
+	}
+
+	.block-prod{
+		width: 395px;
+		height: 67px;
+		float: left;
+		color: #222222;
+		margin-bottom: 5px
+		/*background-color: red*/
+	}
+
+	.block-prod:hover{
+		background-color: #c0c0c0;
+		cursor: pointer;
+		color: #d81414;
+	}
+
+	.block-prod img{
+		width: 54px;
+		height: 54px;
+		float: left;
+		border-radius: 50%;
+		border: 1px solid #fff;
+		margin-left: 25px;
+		margin-top: 6px
+
+	}
+
+	.list-text{
+		width: 260px;
+		height: 64px;
+		float: left;
+		font-size: 13px;
+		line-height: 65px;
+		font-family: CGFont;
+		margin-left: 19px;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+		/*background-color: red*/
+	}
+
+.ui-core-comp{
+	width: 395px;
+	height: 408px;
+	float: left;
+	background: url('../image/core-ct-bg.png')no-repeat #bebebe; 
+	background-position: right bottom;
+}
+	.core-txt{
+		width: 357px;
+		height: 62px;
+		float: left;
+		font-size: 30px;
+		color: #292929;
+		font-family: CGFont;
+		text-transform: uppercase;
+		/*border-bottom: 1px solid;*/
+		line-height: 70px;
+		padding-left: 38px;
+	}
+
+	ul.core-lis{
+		font-family: CGFont;
+		color: #292929;
+		font-size: 14px;
+		list-style: none;
+		width: 357px;
+		padding-left: 40px;
+		float: left;
+		height: 287px;
+		float: left;
+	}
+
+	.core-lis li{
+		height: 39px;
+	}
+
+.ui-ct-download{
+	width: 395px;
+	height: 91px;
+	background: url('../image/ico-ct-download.png') no-repeat #b80900;
+	background-position: 37px 24px;
+	float: left;
+
+}
+
+	.down-text{
+		font-size: 24px;
+		font-family: CGFont;
+		color: #fff;
+		text-transform: uppercase;
+		margin-left: 96px;
+		margin-top: 21px;
+		float: left;
+	}
+
+	.down-stext{
+		font-size: 11px;
+		font-family: CGFont;
+		color: #fff;
+		margin-left: 96px;
+		float: left;
+	}
+
+	.ui-ct-download:hover{
+		background-color: #8f0801;
+		cursor: pointer;
+	}
+
+.ui-ct-team{
+	width: 395px;
+	height: 91px;
+	background: url('../image/ico-ct-team.png') no-repeat #535353;
+	background-position: 37px 24px;
+	float: left;
+}
+
+.ui-ct-team:hover{
+	background-color: #414040;
+	cursor: pointer;
+}
+
+.block-right{
+	width: 805px;
+	height: 1319px;
+	float: left;
+	/*background-color: green*/
+}
+
+.ui-the-content{
+	width: 805px;
+	height: 910px;
+	/*background-color: red;*/
+	float: left;
+}
+
+.ui-activity{
+	width: 805px;
+	height: 408px;
+	float: left;
+	background-color: #0681c6;
+}
+
+	.lbl-act{
+		width: 805px;
+		height: 79px;
+		/*background-color: #ddadad;*/
+		float: left;
+		line-height: 79px;
+		font-family: CGFont;
+		font-size: 30px;
+		text-align: center;
+		color: #fff;
+		text-transform: uppercase;
+	}
+
+	.img-act-ct{
+		width: 760px;
+		height: 129px;
+		float: left;
+		/*background-color: green;*/
+		padding-left: 45px;
+	}
+
+
+	.img-act-ct img{
+		width: 172px;
+		height: 128px;
+		float: left;
+		margin-right: 10px;
+	}
+
+	.act-txt{
+		width: 715px;
+		padding-left: 45px;
+		padding-right: 45px;
+		height: 130px;
+		/*background-color: red;*/
+		float: left;
+		font-family: CGFont;
+		color: #fff;
+		font-size: 12px;
+		padding-top: 23px;
+	}
+
+.btn-ct-more{
+	width: 85px;
+	height: 30px;
+	border: 1px solid #008fdf;
+	border-radius: 15px;
+	background: url('../image/more-blue.png')no-repeat transparent;
+	background-position: 60px;
+	background-size: 21px;
+	float: right;
+	margin-right: 12px;
+	color: #008fdf;
+	font-family: CGFont;
+	font-size: 12px;
+	text-align: left;
+	padding-left: 10px;
+	cursor: pointer;
+	
+}
+
+.btn-ct-more:hover{
+	background: url('../image/more-white.png')no-repeat #008fdf;
+	color: #fff;
+	background-position: 57px;
+	background-size: 21px;
+
+
+}
+
+.ui-blocker-web{
+	width: 100%;
+	height: 100%;
+	display: none;
+	position: fixed;
+	background-color: #000;
+	opacity: .9;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+
+}
