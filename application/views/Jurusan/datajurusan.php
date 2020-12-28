@@ -8,7 +8,7 @@
           <div class="col">
                <div class="card">
                     <div class="card-header">
-                         <a href="<?php echo base_url('Jurusan_controller/tambah'); ?>" class="btn btn-primary float-right mr-5">Tambah</a>
+                         <a href="<?php echo base_url('datajurusan/tambah'); ?>" class="btn btn-primary float-right mr-5">Tambah</a>
                     </div>
                     <div class="card-body">
                          <?php if ($this->session->flashdata('tambah')) : ?>

@@ -1,7 +1,7 @@
       <footer class="sticky-footer bg-white">
           <div class="container my-auto">
               <div class="copyright text-center my-auto">
-                  <span>Copyright &copy; Oxy - Creation <?= date('Y') ?></span>
+                  <span>&copy;Copyright NFAST TEAM <?= date('Y') ?></span>
               </div>
           </div>
       </footer>

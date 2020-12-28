@@ -11,28 +11,31 @@
                          <h5>Input Data Peserta Kelompok</h5>
                     </div>
                     <div class="card-body">
-                         <form action="<?php echo base_url('kelompok_controller/tambah_simpan'); ?>" method="POST" id="inputkelompok">
-                              <div class="form-group">
-                                   <label for="nama_sekolah">Nama Sekolah</label>
-                                   <select class="form-control" name="nama_sekolah">
-                                        <option value="">Pilih :</option>
+                         <form action="<?php echo base_url('datakelompok/simpan'); ?>" method="POST" id="inputkelompok">
+                              <div class="form-group row">
+                                   <label class="col-2" for="nama_sekolah">Nama Sekolah</label>
+                                   <select class="form-control col-5" name="nama_sekolah">
+                                        <option value="">-- Pilih --</option>
                                         <?php foreach ($semua_sekolah as $skl) : ?>
                                              <option value="<?= $skl->id ?>"><?= $skl->nama_sekolah ?></option>
                                         <?php endforeach; ?>
                                    </select>
                               </div>
-                              <div class="form-group">
-                                   <label for="nama_jurusan">Nama Jurusan</label>
-                                   <select class="form-control" name="nama_jurusan">
-                                        <option value="">Pilih :</option>
+                              <div class="form-group row">
+                                   <label class="col-2" for="nama_jurusan">Nama Jurusan</label>
+                                   <select class="form-control col-5" name="nama_jurusan">
+                                        <option value="">-- Pilih --</option>
                                         <?php foreach ($semua_jurusan as $jrs) : ?>
                                              <option value="<?= $jrs->id ?>"><?= $jrs->nama_jurusan ?></option>
                                         <?php endforeach; ?>
                                    </select>
-                                   <div class="form-group">
-                                        <label for="angkatan">Angkatan</label>
-                                        <input class="form-control" type="number" name="angkatan" id="angkatan">
-                                   </div>
+                              </div>
+                              <div class="form-group row">
+                                   <label class="col-2" for="angkatan">Angkatan</label>
+                                   <input class="form-control col-5" type="number" name="angkatan" id="angkatan">
+                              </div>
+                              <div class="form-group">
+                                   <input type="submit" class="btn btn-primary" value="Simpan">
                               </div>
                          </form>
                     </div>

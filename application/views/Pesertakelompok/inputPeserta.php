@@ -11,7 +11,7 @@
                     <h5>Input Data Peserta</h5>
                 </div>
                 <div class="card-body">
-                    <?= form_open_multipart('peserta_controller/simpan/'); ?>
+                    <?= form_open_multipart('datapeserta/simpan/'); ?>
                     <input type="hidden" name="id_kelompok" value="<?= $kelompok->id; ?>">
                     <input type="hidden" name="angkatan" value="<?= $kelompok->angkatan; ?>">
                     <div class="header">

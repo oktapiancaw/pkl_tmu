@@ -9,7 +9,7 @@
             <div class="card">
                 <div class="card-header d-flex justify-content-end">
                     <div class="header">
-                        <a href="<?= base_url('User/tambah'); ?>" class="btn btn-primary mr-5">Tambah</a>
+                        <a href="<?= base_url('datasekolah/tambah'); ?>" class="btn btn-primary mr-5">Tambah</a>
                     </div>
                 </div>
                 <div class="card-body">
@@ -30,20 +30,17 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th style="width: 7%; text-align: center;">
-                                    <center>No</center>
+                                <th class="text-center" style="width: 7%; text-align: center;">
+                                    No
                                 </th>
-                                <th style="width: 10%; text-align: center;">
-                                    <center>ID</center>
+                                <th class="text-center" style="width: 30%">
+                                    Nama Sekolah
                                 </th>
-                                <th style="width: 30%">
-                                    <center>Nama Sekolah</center>
+                                <th class="text-center">
+                                    Alamat
                                 </th>
-                                <th>
-                                    <center>Alamat</center>
-                                </th>
-                                <th>
-                                    <center>No Telepon</center>
+                                <th class="text-center">
+                                    No Telepon
                                 </th>
                                 <th style="width: 20%; text-align: center;">Tindakan</th>
                             </tr>
@@ -55,20 +52,17 @@
                                     <tr>
                                         <td style="text-align: center;"><?php echo $index++; ?></td>
                                         <td>
-                                            <center><?php echo $data_sekolah->id; ?></center>
+                                            <?php echo $data_sekolah->nama_sekolah; ?>
                                         </td>
                                         <td>
-                                            <center><?php echo $data_sekolah->nama_sekolah; ?></center>
+                                            <?php echo $data_sekolah->alamat; ?>
                                         </td>
                                         <td>
-                                            <center><?php echo $data_sekolah->alamat; ?></center>
-                                        </td>
-                                        <td>
-                                            <center><?php echo $data_sekolah->no_tlpn; ?></center>
+                                            <?php echo $data_sekolah->no_tlpn; ?>
                                         </td>
                                         <td style="text-align: center;">
                                             <a href="<?php echo base_url('datasekolah/edit/' . $data_sekolah->id); ?>" class="btn btn-warning fa-fa edit">Edit</a>
-                                            <a href="<?php echo base_url('User/hapus/' . $data_sekolah->id); ?>" class="btn btn-danger">Hapus</a>
+                                            <a href="<?php echo base_url('datasekolah/hapus/' . $data_sekolah->id); ?>" class="btn btn-danger">Hapus</a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

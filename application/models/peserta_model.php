@@ -7,13 +7,13 @@ class peserta_model extends MY_Model
 	{
 		parent::__construct();
 
-		$this->table_name = "data_kelompok";
+		$this->table_name = "data_peserta";
 	}
 
 	public function semua()
 	{
 		$this->db->select('*');
-		$this->db->from('data_nama_kelompok');
+		$this->db->from('data_peserta');
 		$this->db->order_by('id', 'DESC');
 
 		return $this->db->get();
@@ -23,7 +23,7 @@ class peserta_model extends MY_Model
 
 		$this->db->select('*');
 		$this->db->where('id_data_kelompok', $id);
-		$this->db->from('data_nama_kelompok');
+		$this->db->from('data_peserta');
 		$this->db->order_by('id', 'DESC');
 
 		return $this->db->get();

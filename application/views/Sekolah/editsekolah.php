@@ -11,18 +11,18 @@
                     <h5>Update Data Sekolah</h5>
                 </div>
                 <div class="card-body">
-                    <form action="<?php echo base_url('datasekolah/edit/simpan/' . $data_sekolah->id); ?>" method="POST" id="editsekolah">
-                        <div class="form-group">
-                            <label for="nama_sekolah">Nama Sekolah</label>
-                            <input type="text" name="nama_sekolah" id="nama_sekolah" value="<?php echo $data_sekolah->nama_sekolah; ?>">
+                    <form action="<?php echo base_url('datasekolah/update/' . $data_sekolah->id); ?>" method="POST" id="editsekolah">
+                        <div class="form-group row">
+                            <label class="col-2" for="nama_sekolah">Nama Sekolah</label>
+                            <input class="form-control col-5" type="text" name="nama_sekolah" id="nama_sekolah" value="<?php echo $data_sekolah->nama_sekolah; ?>">
                         </div>
-                        <div class="form-group">
-                            <label for="alamat">Alamat</label>
-                            <textarea name="alamat" id="alamat"> <?php echo $data_sekolah->alamat; ?> </textarea>
+                        <div class="form-group row">
+                            <label class="col-2" for="alamat">Alamat</label>
+                            <textarea class="form-control col-5" name="alamat" id="alamat"> <?php echo $data_sekolah->alamat; ?> </textarea>
                         </div>
-                        <div class="form-group">
-                            <label for="no_tlpn">No Telepon</label>
-                            <input type="text" name="no_tlpn" id="no_tlpn" value="<?php echo $data_sekolah->no_tlpn; ?>">
+                        <div class="form-group row">
+                            <label class="col-2" for="no_tlpn">No Telepon</label>
+                            <input class="form-control col-5" type="text" name="no_tlpn" id="no_tlpn" value="<?php echo $data_sekolah->no_tlpn; ?>">
                         </div>
                         <div class="form-group">
                             <input type="submit" class="btn btn-primary" value="Simpan">

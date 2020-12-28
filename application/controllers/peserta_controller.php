@@ -36,14 +36,14 @@ class peserta_controller extends CI_Controller
                'jenis_kelamin' => $this->input->post('jenis_kelamin'),
           );
 
-          $this->db->insert('data_nama_kelompok', $data);
+          $this->db->insert('data_peserta', $data);
 
-          redirect('peserta_controller/list/' . $data['id_data_kelompok']);
+          redirect('datapeserta/list/' . $data['id_data_kelompok']);
      }
      public function edit($id)
      {
 
-          $data['peserta'] = $this->db->get_where('data_nama_kelompok', ['id' => $id])->row();
+          $data['peserta'] = $this->db->get_where('data_peserta', ['id' => $id])->row();
           $this->im_render->main('pesertakelompok/editPeserta', $data);
      }
      public function update()
@@ -56,8 +56,16 @@ class peserta_controller extends CI_Controller
                'jenis_kelamin' => $this->input->post('jenis_kelamin'),
           );
 
-          $this->db->where('id', $id)->update('data_nama_kelompok', $data);
+          $this->db->where('id', $id)->update('data_peserta', $data);
 
-          redirect('peserta_controller/list/' . $id);
+          redirect('datapeserta/list/' . $id);
+     }
+
+     public function hapus($id)
+     {
+          $id = array('id' => $id);
+          $this->peserta_model->delete_data($id);
+
+          redirect('datapeserta');
      }
 }

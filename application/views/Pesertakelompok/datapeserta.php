@@ -7,10 +7,11 @@
 	<div class="row">
 		<div class="col">
 			<div class="card">
-				<div class="card-header d-flex justify-content-end">
-					<div class="header">
-						<a href="<?php echo base_url('peserta_controller/tambah/' . $id); ?>" class="btn btn-primary mr-5">Tambah</a>
-					</div>
+				<div class="card-header d-flex justify-content-between">
+					<h5>
+						ID Kelompok : <?= $id; ?>
+					</h5>
+					<a href="<?php echo base_url('datapeserta/tambah/' . $id); ?>" class="btn btn-primary mr-5">Tambah</a>
 				</div>
 				<div class="card-body">
 					<table class="table">
@@ -19,10 +20,10 @@
 								<th>No</th>
 								<th>ID Kelompok</th>
 								<th>Nama Peserta</th>
+								<th>Jenis Kelamin</th>
 								<th>Email</th>
 								<th>Nomor Telepon</th>
 								<th>Foto</th>
-								<th>Angkatan</th>
 								<th style="width: 20%; text-align: center;">Tindakan</th>
 							</tr>
 						</thead>
@@ -34,13 +35,13 @@
 										<td class="text-center"><?php echo $index++; ?></td>
 										<td class="text-center"><?php echo $data_pesertakelompok->id_data_kelompok; ?></td>
 										<td><?php echo $data_pesertakelompok->nama_peserta; ?></td>
+										<td class="text-center"><?php echo $data_pesertakelompok->jenis_kelamin; ?></td>
 										<td><?php echo $data_pesertakelompok->email; ?></td>
 										<td><?php echo $data_pesertakelompok->no_tlpn; ?></td>
-										<td>Belm Ada</td>
-										<td class="text-center"><?php echo $data_pesertakelompok->jenis_kelamin; ?></td>
+										<td>Belum Ada</td>
 										<td class="text-center">
-											<a href="<?php echo base_url('peserta_controller/edit/' . $data_pesertakelompok->id); ?>" class="btn btn-warning">Edit</a>
-											<a href="<?php echo base_url('peserta_controller/hapus/' . $data_pesertakelompok->id); ?>" class="btn btn-danger">Hapus</a>
+											<a href="<?php echo base_url('datapeserta/edit/' . $data_pesertakelompok->id); ?>" class="btn btn-warning">Edit</a>
+											<a href="<?php echo base_url('datapeserta/hapus/' . $data_pesertakelompok->id); ?>" class="btn btn-danger">Hapus</a>
 										</td>
 									</tr>
 								<?php endforeach; ?>

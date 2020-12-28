@@ -22,7 +22,7 @@ class User extends CI_Controller
 		$this->im_render->main('sekolah/inputsekolah');
 	}
 
-	public function tambah_simpan()
+	public function simpan()
 	{
 		$data = array(
 			'nama_sekolah' => $this->input->post('nama_sekolah'),
@@ -33,7 +33,7 @@ class User extends CI_Controller
 
 		$this->User_m->insert_data($data);
 
-		redirect('user');
+		redirect('datasekolah');
 	}
 
 	public function edit($id)
@@ -43,7 +43,7 @@ class User extends CI_Controller
 		$this->im_render->main('sekolah/editsekolah', $data);
 	}
 
-	public function edit_simpan($id)
+	public function update($id)
 	{
 		$data = array(
 			'nama_sekolah' => $this->input->post('nama_sekolah'),
@@ -54,7 +54,7 @@ class User extends CI_Controller
 		$id = array('id' => $id);
 		$this->User_m->update_data($data, $id);
 
-		redirect(base_url());
+		redirect('datasekolah');
 	}
 
 	public function hapus($id)
@@ -62,12 +62,6 @@ class User extends CI_Controller
 		$id = array('id' => $id);
 		$this->User_m->delete_data($id);
 
-		redirect(base_url());
-	}
-
-	public function daftar()
-	{
-		$data['daftar_kelompok'] = $this->kelompok_model->get_filtered();
-		$this->im_render->main('kelompok/datapeserta', $data);
+		redirect('datasekolah');
 	}
 }

@@ -11,7 +11,7 @@
                     <h5>Update Data Peserta</h5>
                 </div>
                 <div class="card-body">
-                    <?= form_open_multipart('peserta_controller/update/'); ?>
+                    <?= form_open_multipart('datapeserta/update/'); ?>
                     <input type="hidden" name="id" value="<?= $peserta->id; ?>">
                     <div class="form-group row">
                         <label class="col-2" for="photo">Upload Pas Photo</label>
@@ -37,7 +37,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <input type="submit" class="btn btn-primary" value="Simpan">
+                        <input type="submit" class="btn btn-primary" value="Update">
                     </div>
                     <?= form_close() ?>
                 </div>

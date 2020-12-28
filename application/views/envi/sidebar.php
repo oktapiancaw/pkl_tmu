@@ -16,19 +16,19 @@
             MEnu
         </div>
         <li class="nav-item">
-            <a class="nav-link pb-0" href="<?= base_url('user') ?>">
+            <a class="nav-link pb-0" href="<?= base_url('datasekolah') ?>">
                 <i class="fas fa-fw fa-school"></i>
                 <span>Data Sekolah</span>
             </a>
-            <a class="nav-link pb-0" href="<?= base_url('Jurusan_controller') ?>">
+            <a class="nav-link pb-0" href="<?= base_url('datajurusan') ?>">
                 <i class="fas fa-fw fa-edit"></i>
                 <span>Data Jurusan</span>
             </a>
-            <a class="nav-link pb-0" href="<?= base_url('Kelompok_controller') ?>">
+            <a class="nav-link pb-0" href="<?= base_url('datakelompok') ?>">
                 <i class="fas fa-fw fa-users"></i>
                 <span>Data Kelompok</span>
             </a>
-            <a class="nav-link pb-0" href="<?= base_url('peserta_controller') ?>">
+            <a class="nav-link pb-0" href="<?= base_url('datapeserta') ?>">
                 <i class="fas fa-fw fa-user"></i>
                 <span>Data Peserta</span>
             </a>

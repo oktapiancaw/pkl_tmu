@@ -17,14 +17,14 @@ class Jurusan_controller extends CI_Controller
           $data['semua_sekolah'] = $this->User_m->get_all()->result();
           $this->im_render->main('jurusan/inputjurusan', $data);
      }
-     public function tambah_simpan()
+     public function simpan()
      {
           $data = array(
                'id_sekolah' => $this->input->post('id_sekolah'),
                'nama_jurusan' => $this->input->post('nama_jurusan'),
           );
           $this->jurusan_model->insert_data($data);
-          redirect(base_url());
+          redirect('datajurusan');
      }
      public function edit($id)
      {
@@ -33,7 +33,7 @@ class Jurusan_controller extends CI_Controller
           $data['semua_sekolah'] = $this->User_m->get_all()->result();
           $this->im_render->main('jurusan/editjurusan', $data);
      }
-     public function edit_simpan($id)
+     public function update($id)
      {
           $data = array(
                'id_sekolah' => $this->input->post('id_sekolah'),
@@ -41,12 +41,12 @@ class Jurusan_controller extends CI_Controller
           );
           $id = array('id' => $id);
           $this->jurusan_model->update_data($data, $id);
-          redirect(base_url());
+          redirect('datajurusan');
      }
      public function hapus($id)
      {
           $id = array('id' => $id);
           $this->jurusan_model->delete_data($id);
-          redirect(base_url());
+          redirect('datajurusan');
      }
 }

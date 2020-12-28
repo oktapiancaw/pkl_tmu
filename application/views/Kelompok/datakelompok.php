@@ -9,7 +9,7 @@
 			<div class="card">
 				<div class="card-header d-flex justify-content-end">
 					<div class="header">
-						<a href="<?php echo base_url('kelompok_controller/tambah/'); ?>" class="btn btn-primary mr-5">Tambah</a>
+						<a href="<?php echo base_url('datakelompok/tambah/'); ?>" class="btn btn-primary mr-5">Tambah</a>
 					</div>
 				</div>
 				<div class="card-body">
@@ -33,7 +33,7 @@
 										<td><?php echo $data_kelompok->nama_jurusan; ?></td>
 										<td><?php echo $data_kelompok->angkatan; ?></td>
 										<td style="text-align: center;">
-											<a href="<?php echo base_url('peserta_controller/list/' . $data_kelompok->id) ?>" class="btn btn-info">Peserta</a>
+											<a href="<?php echo base_url('datapeserta/list/' . $data_kelompok->id) ?>" class="btn btn-info">Peserta</a>
 											<a href="<?php echo base_url('datakelompok/edit/' . $data_kelompok->id); ?>" class="btn btn-warning">Edit</a>
 											<a href="<?php echo base_url('datakelompok/hapus/' . $data_kelompok->id); ?>" class="btn btn-danger">Hapus</a>
 										</td>
