@@ -14,16 +14,22 @@
                     <form action="<?php echo base_url('datajurusan/update/' . $data_jurusan->id); ?>" method="POST" id="editjurusan">
                         <div class="form-group row">
                             <label class="col-2" for="id_sekolah">Nama Sekolah</label>
-                            <select class="form-control col-5" name="id_sekolah">
-                                <option value="">Pilih :</option>
-                                <?php foreach ($semua_sekolah as $skl) : ?>
-                                    <option value="<?= $skl->id ?>" <?= select_set($skl->id, $data_jurusan->id_sekolah) ?>><?= $skl->nama_sekolah ?></option>
-                                <?php endforeach; ?>
-                            </select>
+                            <div class="col-5">
+                                <select class="form-control" name="id_sekolah">
+                                    <option value="">Pilih :</option>
+                                    <?php foreach ($semua_sekolah as $skl) : ?>
+                                        <option value="<?= $skl->id ?>" <?= select_set($skl->id, $data_jurusan->id_sekolah) ?>><?= $skl->nama_sekolah ?></option>
+                                    <?php endforeach; ?>
+                                </select>
+                                <?= form_error('id_sekolah', '<small class="text-danger pl-3">', '</small>'); ?>
+                            </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-2" for="nama_jurusan">Nama Jurusan</label>
-                            <input class="form-control col-5" type="text" name="nama_jurusan" id="nama_jurusan" value="<?php echo $data_jurusan->nama_jurusan; ?>">
+                            <div class="col-5">
+                                <input class="form-control" type="text" name="nama_jurusan" id="nama_jurusan" value="<?php echo $data_jurusan->nama_jurusan; ?>">
+                                <?= form_error('nama_jurusan', '<small class="text-danger pl-3">', '</small>'); ?>
+                            </div>
                         </div>
                         <div class="form-group">
                             <input type="submit" class="btn btn-primary" value="Update">

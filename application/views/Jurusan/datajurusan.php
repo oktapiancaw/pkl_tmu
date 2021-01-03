@@ -5,6 +5,11 @@
           </div>
      </div>
      <div class="row">
+          <div class="col-sm">
+               <?= $this->session->flashdata('message');  ?>
+          </div>
+     </div>
+     <div class="row">
           <div class="col">
                <div class="card">
                     <div class="card-header">

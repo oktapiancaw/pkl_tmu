@@ -18,26 +18,40 @@
                     </div>
                     <div class="form-group row">
                         <label class="col-2" for="photo">Upload Pas Photo</label>
-                        <input class="form-control col-5" type="file" name="f_photo" id="photo">
+                        <div class="col-5">
+                            <input class="form-control" type="file" name="photo" id="photo">
+                        </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-2" for="nama_peserta">Nama Peserta</label>
-                        <input class="form-control col-5" type="text" name="nama_peserta" id="nama_peserta">
+                        <div class="col-5">
+                            <input class="form-control" type="text" name="nama_peserta" id="nama_peserta">
+                            <?= form_error('nama_peserta', '<small class="text-danger pl-1">', '</small>'); ?>
+                        </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-2" for="email">Email</label>
-                        <input class="form-control col-5" type="text" name="email" id="email">
+                        <div class="col-5">
+                            <input class="form-control" type="text" name="email" id="email">
+                            <?= form_error('email', '<small class="text-danger pl-1">', '</small>'); ?>
+                        </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-2" for="no_tlpn">Nomor Telepon</label>
-                        <input class="form-control col-5" type="text" name="no_tlpn" id="no_tlpn">
+                        <div class="col-5">
+                            <input class="form-control" type="text" name="no_tlpn" id="no_tlpn">
+                            <?= form_error('no_tlpn', '<small class="text-danger pl-1">', '</small>'); ?>
+                        </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-2" for="no_tlpn">Jenis Kelamin</label>
-                        <select name="jenis_kelamin" class="form-control col-5" id="">
-                            <option value="Pria">Pria</option>
-                            <option value="Wanita">Wanita</option>
-                        </select>
+                        <div class="col-5">
+                            <select name="jenis_kelamin" class="form-control" id="">
+                                <option value="Pria">Pria</option>
+                                <option value="Wanita">Wanita</option>
+                            </select>
+                            <?= form_error('jenis_kelamin', '<small class="text-danger pl-1">', '</small>'); ?>
+                        </div>
                     </div>
                     <div class="form-group">
                         <input type="submit" class="btn btn-primary" value="Simpan">

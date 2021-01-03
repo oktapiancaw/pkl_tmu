@@ -24,16 +24,24 @@ class User extends CI_Controller
 
 	public function simpan()
 	{
-		$data = array(
-			'nama_sekolah' => $this->input->post('nama_sekolah'),
-			'alamat' => $this->input->post('alamat'),
-			'no_tlpn' => $this->input->post('no_tlpn'),
-		);
+		$this->form_validation->set_rules('nama_sekolah', 'Sekolah', 'required|trim');
+		$this->form_validation->set_rules('alamat', 'Alamat', 'required|trim');
+		$this->form_validation->set_rules('no_tlpn', 'No Telepon', 'required|trim');
+		if ($this->form_validation->run() == false) {
+			$this->tambah();
+		} else {
+			$data = array(
+				'nama_sekolah' => $this->input->post('nama_sekolah'),
+				'alamat' => $this->input->post('alamat'),
+				'no_tlpn' => $this->input->post('no_tlpn'),
+			);
 
 
-		$this->User_m->insert_data($data);
+			$this->User_m->insert_data($data);
+			$this->session->set_flashdata('message', '<div class="alert alert-success" id="non-mr" role="alert"><i class="fas fa-info-circle"></i>Sekolah telah ditambahkan</div>');
 
-		redirect('datasekolah');
+			redirect('datasekolah');
+		}
 	}
 
 	public function edit($id)
@@ -45,22 +53,31 @@ class User extends CI_Controller
 
 	public function update($id)
 	{
-		$data = array(
-			'nama_sekolah' => $this->input->post('nama_sekolah'),
-			'alamat' => $this->input->post('alamat'),
-			'no_tlpn' => $this->input->post('no_tlpn')
-		);
+		$this->form_validation->set_rules('nama_sekolah', 'Sekolah', 'required|trim');
+		$this->form_validation->set_rules('alamat', 'Alamat', 'required|trim');
+		$this->form_validation->set_rules('no_tlpn', 'No Telepon', 'required|trim');
+		if ($this->form_validation->run() == false) {
+			$this->edit($id);
+		} else {
+			$data = array(
+				'nama_sekolah' => $this->input->post('nama_sekolah'),
+				'alamat' => $this->input->post('alamat'),
+				'no_tlpn' => $this->input->post('no_tlpn')
+			);
 
-		$id = array('id' => $id);
-		$this->User_m->update_data($data, $id);
+			$id = array('id' => $id);
+			$this->User_m->update_data($data, $id);
+			$this->session->set_flashdata('message', '<div class="alert alert-success" id="non-mr" role="alert"><i class="fas fa-info-circle"></i>Sekolah telah diupdate</div>');
 
-		redirect('datasekolah');
+			redirect('datasekolah');
+		}
 	}
 
 	public function hapus($id)
 	{
 		$id = array('id' => $id);
 		$this->User_m->delete_data($id);
+		$this->session->set_flashdata('message', '<div class="alert alert-success" id="non-mr" role="alert"><i class="fas fa-info-circle"></i>Sekolah telah dihapus</div>');
 
 		redirect('datasekolah');
 	}

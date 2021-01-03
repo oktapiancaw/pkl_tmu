@@ -5,6 +5,11 @@
 		</div>
 	</div>
 	<div class="row">
+		<div class="col-sm">
+			<?= $this->session->flashdata('message');  ?>
+		</div>
+	</div>
+	<div class="row">
 		<div class="col">
 			<div class="card">
 				<div class="card-header d-flex justify-content-between">
@@ -18,7 +23,6 @@
 						<thead>
 							<tr>
 								<th>No</th>
-								<th>ID Kelompok</th>
 								<th>Nama Peserta</th>
 								<th>Jenis Kelamin</th>
 								<th>Email</th>
@@ -30,18 +34,17 @@
 						<tbody>
 							<?php if ($semua_peserta->num_rows() > 0) : ?>
 								<?php $index = 1; ?>
-								<?php foreach ($semua_peserta->result() as $data_pesertakelompok) : ?>
+								<?php foreach ($semua_peserta->result() as $peserta) : ?>
 									<tr>
 										<td class="text-center"><?php echo $index++; ?></td>
-										<td class="text-center"><?php echo $data_pesertakelompok->id_data_kelompok; ?></td>
-										<td><?php echo $data_pesertakelompok->nama_peserta; ?></td>
-										<td class="text-center"><?php echo $data_pesertakelompok->jenis_kelamin; ?></td>
-										<td><?php echo $data_pesertakelompok->email; ?></td>
-										<td><?php echo $data_pesertakelompok->no_tlpn; ?></td>
-										<td>Belum Ada</td>
+										<td><?php echo $peserta->nama_peserta; ?></td>
+										<td class="text-center"><?php echo $peserta->jenis_kelamin; ?></td>
+										<td><?php echo $peserta->email; ?></td>
+										<td><?php echo $peserta->no_tlpn; ?></td>
+										<td><?= ($peserta->photo ? '<img style="width: 150px;" src="' . base_url('uploads/image/') . $peserta->photo . '">' : 'Belum Ada'); ?></td>
 										<td class="text-center">
-											<a href="<?php echo base_url('datapeserta/edit/' . $data_pesertakelompok->id); ?>" class="btn btn-warning">Edit</a>
-											<a href="<?php echo base_url('datapeserta/hapus/' . $data_pesertakelompok->id); ?>" class="btn btn-danger">Hapus</a>
+											<a href="<?php echo base_url('datapeserta/edit/' . $peserta->id); ?>" class="btn btn-warning">Edit</a>
+											<a href="<?php echo base_url('datapeserta/hapus/' . $peserta->id); ?>" class="btn btn-danger">Hapus</a>
 										</td>
 									</tr>
 								<?php endforeach; ?>

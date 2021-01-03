@@ -5,11 +5,16 @@
         </div>
     </div>
     <div class="row">
+        <div class="col-sm">
+            <?= $this->session->flashdata('message');  ?>
+        </div>
+    </div>
+    <div class="row">
         <div class="col">
             <div class="card">
                 <div class="card-header d-flex justify-content-between">
                     <h5>Data Semua Peserta</h5>
-                    <a href="<?= base_url() ?>" class="btn btn-primary mr-5">Atur Data</a>
+                    <a href="<?= base_url('datakelompok') ?>" class="btn btn-primary mr-5">Atur Data</a>
                 </div>
                 <div class="card-body">
                     <table class="table">

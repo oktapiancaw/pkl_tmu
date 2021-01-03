@@ -14,15 +14,24 @@
                     <form action="<?php echo base_url('datasekolah/update/' . $data_sekolah->id); ?>" method="POST" id="editsekolah">
                         <div class="form-group row">
                             <label class="col-2" for="nama_sekolah">Nama Sekolah</label>
-                            <input class="form-control col-5" type="text" name="nama_sekolah" id="nama_sekolah" value="<?php echo $data_sekolah->nama_sekolah; ?>">
+                            <div class="col-5">
+                                <input class="form-control" type="text" name="nama_sekolah" id="nama_sekolah" value="<?php echo $data_sekolah->nama_sekolah; ?>">
+                                <?= form_error('nama_sekolah', '<small class="text-danger pl-3">', '</small>'); ?>
+                            </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-2" for="alamat">Alamat</label>
-                            <textarea class="form-control col-5" name="alamat" id="alamat"> <?php echo $data_sekolah->alamat; ?> </textarea>
+                            <div class="col-5">
+                                <textarea class="form-control" name="alamat" id="alamat"> <?php echo $data_sekolah->alamat; ?> </textarea>
+                                <?= form_error('alamat', '<small class="text-danger pl-3">', '</small>'); ?>
+                            </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-2" for="no_tlpn">No Telepon</label>
-                            <input class="form-control col-5" type="text" name="no_tlpn" id="no_tlpn" value="<?php echo $data_sekolah->no_tlpn; ?>">
+                            <div class="col-5">
+                                <input class="form-control" type="text" name="no_tlpn" id="no_tlpn" value="<?php echo $data_sekolah->no_tlpn; ?>">
+                                <?= form_error('no_tlpn', '<small class="text-danger pl-3">', '</small>'); ?>
+                            </div>
                         </div>
                         <div class="form-group">
                             <input type="submit" class="btn btn-primary" value="Simpan">
