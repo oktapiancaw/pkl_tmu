@@ -41,7 +41,7 @@
                                         <td class="text-center"><?php echo $item->jenis_kelamin; ?></td>
                                         <td><?php echo $item->email; ?></td>
                                         <td><?php echo $item->no_tlpn; ?></td>
-                                        <td>Belm Ada</td>
+                                        <td><?= ($peserta->photo ? '<img style="width: 150px;" src="' . base_url('uploads/image/') . $peserta->photo . '">' : 'Belum Ada'); ?></td>
                                         <td class="text-center">
                                             <a href="<?php echo base_url('peserta_controller/edit/' . $item->id); ?>" class="btn btn-warning">Edit</a>
                                             <a href="<?php echo base_url('peserta_controller/hapus/' . $item->id); ?>" class="btn btn-danger">Hapus</a>
