@@ -33,18 +33,18 @@
                         <tbody>
                             <?php if ($semua_peserta->num_rows() > 0) : ?>
                                 <?php $index = 1; ?>
-                                <?php foreach ($semua_peserta->result() as $item) : ?>
+                                <?php foreach ($semua_peserta->result() as $peserta) : ?>
                                     <tr>
                                         <td class="text-center"><?php echo $index++; ?></td>
-                                        <td class="text-center"><?php echo $item->id_data_kelompok; ?></td>
-                                        <td><?php echo $item->nama_peserta; ?></td>
-                                        <td class="text-center"><?php echo $item->jenis_kelamin; ?></td>
-                                        <td><?php echo $item->email; ?></td>
-                                        <td><?php echo $item->no_tlpn; ?></td>
+                                        <td class="text-center"><?php echo $peserta->id_data_kelompok; ?></td>
+                                        <td><?php echo $peserta->nama_peserta; ?></td>
+                                        <td class="text-center"><?php echo $peserta->jenis_kelamin; ?></td>
+                                        <td><?php echo $peserta->email; ?></td>
+                                        <td><?php echo $peserta->no_tlpn; ?></td>
                                         <td><?= ($peserta->photo ? '<img style="width: 150px;" src="' . base_url('uploads/image/') . $peserta->photo . '">' : 'Belum Ada'); ?></td>
                                         <td class="text-center">
-                                            <a href="<?php echo base_url('peserta_controller/edit/' . $item->id); ?>" class="btn btn-warning">Edit</a>
-                                            <a href="<?php echo base_url('peserta_controller/hapus/' . $item->id); ?>" class="btn btn-danger">Hapus</a>
+                                            <a href="<?php echo base_url('peserta_controller/edit/' . $peserta->id); ?>" class="btn btn-warning">Edit</a>
+                                            <a href="<?php echo base_url('peserta_controller/hapus/' . $peserta->id); ?>" class="btn btn-danger">Hapus</a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>
