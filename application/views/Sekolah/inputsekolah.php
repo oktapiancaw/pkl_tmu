@@ -22,7 +22,7 @@
                               <div class="form-group row">
                                    <label class="col-2" for="alamat">Alamat</label>
                                    <div class="col-5">
-                                        <textarea class="form-contl-5" name="alamat" style="max-width: 600px; max-height: 100px" id="alamat"></textarea>
+                                        <textarea class="form-control" name="alamat" style="max-width: 600px; max-height: 100px" id="alamat"></textarea>
                                         <?= form_error('alamat', '<small class="text-danger pl-3">', '</small>'); ?>
                                    </div>
                               </div>
